@@ -1,0 +1,140 @@
+
+<!doctype html>
+<html>
+<head>
+<style>
+  h2{font-size:2.4em;}
+
+</style>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="w3.css">
+<link rel="stylesheet" type="text/css" href="slideshow.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<title>Photo Gallery</title>
+
+
+<body>
+  <section
+<div id="header">
+
+  <div class="container">
+    <a id="header-title" href="photos.html">Photo Gallery</a>
+    <ul id="header-nav"
+      <li><a href="index.html">My Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:tkddesign151@gmail.com?Subject=Hello%20" target="_top">Contact Me</a></li>
+    </ul>
+    </div>
+  </div>
+  <div class="w3-panel w3-red">
+<span style="text-align:center;"<h2>The People of Boise</h2>
+</div>
+<!-- Container for the image gallery -->
+<div class="photo-container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="Images/IMG_0290.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="Images/IMG_0292.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="Images/IMG_0293.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="Images/IMG_0307.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="Images/IMG_0312.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="Images/IMG_0328.jpg" style="width:100%">
+  </div>
+
+
+  <<script type="text/javascript">
+    
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+  </script>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="Images/IMG_0290.jpg" style="width:100%" onclick="currentSlide(1)" alt="Biking Downtown">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/IMG_0292.jpg" style="width:100%" onclick="currentSlide(2)" alt="Basque Festival">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/IMG_0293.jpg" style="width:100%" onclick="currentSlide(3)" alt="Bros in Boise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/IMG_0307.jpg" style="width:100%" onclick="currentSlide(4)" alt="Hippies enjoying the day.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/IMG_0312.jpg" style="width:100%" onclick="currentSlide(5)" alt="Darth in the Park">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Images/IMG_0328.jpg" style="width:100%" onclick="currentSlide(6)" alt="Actors">
+    </div>
+  </div>
+  <<script type="text/javascript">
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
+  </script>
+</div>
+</body>
+</html>
